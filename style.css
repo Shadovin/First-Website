@@ -1,0 +1,205 @@
+body {
+    font: 10px Helvetica,
+        Arial,
+        sans-serif;
+    color: white;
+    background-image: url(img/diagmonds_@2X.png);
+    background-size: 20%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    text-shadow: 2px 2px black;
+}
+
+h2 {
+    color: darkgoldenrod;
+}
+
+/* Header */
+.header {
+    position: relative;
+    top: 0;
+}
+
+.header h1 {
+    position: absolute;
+    top: 0;
+    left: 5vw;
+    font-size: 2.1rem;
+    letter-spacing: 4px;
+}
+
+/* Banner */
+.banner img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Navigation */
+.hamburger {
+    position: fixed;
+    top: 5%;
+    right: 2%;
+    display: block;
+    background-color: transparent;
+    border: none;
+    width: 9vh;
+    height: 9vh;
+    padding-bottom: 7px;
+}
+
+.inner,
+.inner::before,
+.inner,
+.inner::after {
+    width: 12vw;
+    height: 1vh;
+    background-color: white;
+}
+
+.inner {
+    position: relative;
+    display: inline-block;
+}
+
+.inner::before,
+.inner,
+.inner::after {
+    content: "";
+    position: absolute;
+    display: block;
+}
+
+.inner::before {
+    top: -200%;
+}
+
+.inner::after {
+    top: 200%;
+}
+
+/* Start - information about page */
+.start {
+    text-align: center;
+    text-shadow: 1px 1px black;
+
+}
+
+.start h2 {
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+}
+
+.start p {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    padding: 10px;
+    line-height: 2rem
+}
+
+.gitLogo {
+    text-align: center;
+}
+
+.gitLogo img {
+    min-width: 55%;
+    height: 35vh;
+}
+
+.gitLogo a {
+    display: block;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 4px;
+    transition: .3s;
+    bottom: 0;
+}
+
+/* Section languages */
+.languages {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 15px;
+    line-height: 2rem
+}
+
+.languages h2 {
+    font-size: 2.2rem;
+    letter-spacing: 4px;
+}
+
+.languages h3 {
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+}
+
+.languages img {
+    max-width: 100%;
+    height: auto;
+
+
+}
+
+.languages img:last-of-type {
+    width: 80%;
+    border-radius: 10%;
+}
+
+/* Section contact */
+.contact {}
+
+.contact {
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.1rem;
+    letter-spacing: 4px;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 15px;
+    line-height: 2rem
+}
+
+.contact input {
+    display: block;
+    margin: 0 auto;
+    width: 75vw;
+    height: 4vh;
+    margin-top: 5vh;
+}
+
+input:last-of-type {
+    width: 80vw;
+    height: 30vh;
+}
+
+.email {
+    background-color: #111;
+    border: 1px white solid;
+
+    color: darkgoldenrod;
+    text-shadow: 2px 2px black;
+    font-size: 1.3rem;
+    margin-top: 5vh;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    box-shadow: 3px 3px black;
+
+}
+
+/* Footer */
+footer h3 {
+    margin-top: 8vh;
+    height: 5vh;
+    text-align: center;
+    line-height: 5vh;
+}
