@@ -1,4 +1,5 @@
 body {
+    min-width: 320px;
     font: 10px Helvetica,
         Arial,
         sans-serif;
@@ -47,24 +48,43 @@ header {
 /* Navigation */
 .navigation {
     position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 7vh;
-    font-size: 1.1rem;
-    background-color: #222;
-    display: none;
+    right: 0;
+    top: 12%;
+    transform: translateX(200px);
+    transition: transform .3s linear;
+
+}
+
+.active_navigation {
+    transform: translateX(0);
+
 }
 
 .menu {
+    font-size: 1rem;
+    background-color: transparent;
     list-style: none;
-    display: flex;
-    justify-content: space-around;
+
 }
 
-.item {
-    text-decoration: none;
-    flex-basis: 20%;
+#item {
+    width: 90%;
+    font-size: 0.9rem;
+    margin-top: 2vh;
+    padding: 5px 10px;
+    letter-spacing: 3px;
+    box-shadow: 2px 2px black;
+    border: 1px white solid;
+    text-shadow: 1px 1px black;
+    text-transform: uppercase;
+    text-align: center;
+    color: goldenrod;
+    background-color: #111;
+    transition: color .3s linear;
+}
+
+#item:hover {
+    color: white;
 }
 
 
@@ -79,6 +99,7 @@ header {
     padding: 10px;
     cursor: pointer;
     background-color: transparent;
+    text-shadow: 2px 2px black;
 }
 
 .hamburger_box {
@@ -91,7 +112,7 @@ header {
 .hamburger_inner {
     top: 50%;
     transform: translatetY(-50%);
-    transition: 0.2s linear;
+    transition: transform 0.2s linear;
 }
 
 .hamburger_inner,
@@ -121,21 +142,21 @@ header {
 }
 
 .active .hamburger_inner::before {
-    transform: translateY(10px) rotate(45deg) rotateY(45deg)
+    transform: translateY(10px) rotate(45deg) rotateY(45deg);
 }
 
 .active .hamburger_inner::after {
-    transform: translateY(-10px) rotate(-45deg) rotateY(-45deg)
+    transform: translateY(-10px) rotate(-45deg) rotateY(-45deg);
 }
 
 /* Start - information about page */
 
-.start h2 {
+.start_section h2 {
     font-size: 1.8rem;
     letter-spacing: 4px;
 }
 
-.start p {
+.start_section p {
     font-size: 1.1rem;
     letter-spacing: 1px;
     padding: 10px;
@@ -155,19 +176,19 @@ header {
 }
 
 /* Section languages */
-.languages {
+.languages_section {
     font-size: 1.1rem;
     padding: 15px;
     line-height: 2rem;
     letter-spacing: 1px;
 }
 
-.languages h3 {
+.languages_section h3 {
     font-size: 1.8rem;
     letter-spacing: 4px;
 }
 
-.languages img {
+.languages_section img {
     max-width: 100%;
     height: auto;
 }
@@ -179,19 +200,19 @@ header {
 
 /* Section contact */
 
-.contact h2 {
+.contact_section h2 {
     font-size: 2.1rem;
     letter-spacing: 4px;
 }
 
-.contact p {
+.contact_section p {
     font-size: 1.1rem;
     padding: 15px;
     line-height: 2rem;
     letter-spacing: 1px;
 }
 
-.contact input {
+.contact_section input {
     width: 75vw;
     height: 4vh;
     margin: 0 auto;
@@ -220,6 +241,11 @@ input:last-of-type {
     color: darkgoldenrod;
     text-shadow: 2px 2px black;
     text-transform: uppercase;
+    transition: color .3s linear;
+}
+
+.send_button:hover {
+    color: white;
 }
 
 /* Footer */

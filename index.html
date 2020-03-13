@@ -7,6 +7,7 @@
     <title>Project</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap&subset=latin-ext" rel="stylesheet">
+
 </head>
 
 <body>
@@ -18,9 +19,10 @@
     </header>
     <div class="navigation">
         <ul class="menu">
-            <li class="item"><a href=""></a>Start</li>
-            <li class="item"><a href=""></a>My GitHub</li>
-            <li class="item"><a href=""></a>Contact</li>
+            <li class="start" id="item"><a href=""></a>Start</li>
+            <li class="git" id="item"><a href=""></a>GitHub</li>
+            <li class=" languages" id="item"><a href=""></a>Languages</li>
+            <li class="contact" id="item"><a href=""></a>Contact</li>
         </ul>
     </div>
     <button class="hamburger">
@@ -31,12 +33,12 @@
         </span>
     </button>
 
-    <main class="start">
+    <main data-section="start" class="start_section">
         <h2>Welcome to my fanpage</h2>
         <p>This project is only for practice languages, like HTML, CSS and JavaScript. It's fully responsive WebPage for
             all resolutions (I hope ^^). If you would like to see how I've done it, go check my
             gitHub.</p>
-        <div class="gitLogo">
+        <div data-section="git" class="gitLogo">
             <div class="imgShadow">
                 <img src="img/git_logo.png" alt=" Git Hub Logo">
             </div>
@@ -44,7 +46,7 @@
         </div>
     </main>
     </div>
-    <section class="languages">
+    <section data-section="languages" class="languages_section">
         <h2>Languages</h2>
         <div class="info_html">
             <h3>HTML</h3>
@@ -74,19 +76,21 @@
                 possible if you only want. </p>
         </div>
     </section>
-    <section class="contact">
+    <section data-section="contact" class="contact_section">
         <h2>Contact</h2>
         <p>If you would like to give me some advice or "tricks", you can write to me :).</p>
         <input type="text" class="name">
         <input type="text" class="e-mail">
         <input type="text" class="topic">
-        <input type="text" class="message_content">
+        <input type="placeholder" class="message_content">
         <button class="send_button">Send email</button>
     </section>
     <footer>
         <h3> Author Marcin Ciechowicz</h3>
     </footer>
     <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="jquery.js"></script>
 </body>
 
 </html>
