@@ -21,6 +21,13 @@ h2 {
     letter-spacing: 4px;
 }
 
+p {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    padding: 10px;
+    line-height: 2rem;
+}
+
 /* Header */
 header {
     position: relative;
@@ -61,7 +68,6 @@ header {
 }
 
 .menu {
-    font-size: 1rem;
     background-color: transparent;
     list-style: none;
 
@@ -156,32 +162,29 @@ header {
     letter-spacing: 4px;
 }
 
-.start_section p {
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    padding: 10px;
-    line-height: 2rem
-}
-
 .gitLogo img {
     max-width: 70%;
     height: auto;
 }
 
 .gitLogo a {
+    display: block;
     font-size: 1.6rem;
     letter-spacing: 4px;
     text-decoration: none;
     color: white;
+    transform: scale(1);
+    transition: .3s linear;
+
+}
+
+.gitLogo a:hover {
+    color: darkgoldenrod;
+    transform: scale(1.1);
+
 }
 
 /* Section languages */
-.languages_section {
-    font-size: 1.1rem;
-    padding: 15px;
-    line-height: 2rem;
-    letter-spacing: 1px;
-}
 
 .languages_section h3 {
     font-size: 1.8rem;
@@ -193,24 +196,12 @@ header {
     height: auto;
 }
 
-.languages img:last-of-type {
+.languages_section img:last-of-type {
     width: 80%;
     border-radius: 10%;
 }
 
 /* Section contact */
-
-.contact_section h2 {
-    font-size: 2.1rem;
-    letter-spacing: 4px;
-}
-
-.contact_section p {
-    font-size: 1.1rem;
-    padding: 15px;
-    line-height: 2rem;
-    letter-spacing: 1px;
-}
 
 .contact_section input {
     width: 75vw;
@@ -226,6 +217,12 @@ header {
 input:last-of-type {
     width: 80vw;
     height: 30vh;
+}
+
+::placeholder {
+    font-size: 0.8rem;
+    color: darkgoldenrod;
+    opacity: 0.5;
 }
 
 /* Button */
@@ -253,4 +250,250 @@ footer h3 {
     margin-top: 8vh;
     height: 5vh;
     line-height: 5vh;
+    font-size: 0.7rem;
+}
+
+/* Media Queries */
+
+@media (min-width: 410px) {
+    h2 {
+        font-size: 2.7rem;
+        letter-spacing: 6px;
+    }
+
+    p {
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+        padding: 20px;
+        line-height: 2.2rem
+    }
+
+    .hello {
+        font-size: 2rem;
+        letter-spacing: 6px;
+        text-shadow: 3px 3px goldenrod;
+    }
+
+    /* Hamburger */
+    .hamburger {
+        padding: 10px;
+
+    }
+
+    .hamburger_box {
+        width: 50px;
+        height: 24px;
+    }
+
+    .hamburger_inner,
+    .hamburger_inner::before,
+    .hamburger_inner::after {
+        height: 5px;
+    }
+
+    .hamburger_inner::before {
+        content: "";
+        margin-top: -12px;
+
+    }
+
+    .hamburger_inner::after {
+        content: "";
+        margin-top: 12px;
+    }
+
+    .active .hamburger_inner::before {
+        transform: translateY(12px) rotate(45deg) rotateY(45deg);
+    }
+
+    .active .hamburger_inner::after {
+        transform: translateY(-12px) rotate(-45deg) rotateY(-45deg);
+    }
+
+    #item {
+        font-size: 1.2rem;
+        padding: 10px 10px;
+        box-shadow: 3px 3px black;
+        text-shadow: 2px 2px black;
+    }
+
+    .start_section h2 {
+        font-size: 2.1rem;
+        letter-spacing: 6px;
+    }
+
+    /* Section languages */
+    .languages_section h3 {
+        font-size: 2.2rem;
+        letter-spacing: 6px;
+    }
+
+    /* Section contact */
+    .contact_section input {
+        width: 80vw;
+        height: 5vh;
+        box-shadow: 2px 2px black;
+    }
+
+    input:last-of-type {
+        width: 85vw;
+        height: 32vh;
+    }
+
+    ::placeholder {
+        font-size: 0.9rem;
+    }
+
+    /* Button */
+    .send_button {
+        font-size: 1.6rem;
+        margin: 8vh auto;
+        letter-spacing: 4px;
+        box-shadow: 4px 4px black;
+        text-shadow: 3px 3px black;
+    }
+
+    /* Footer */
+    footer h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 567px) {
+    h2 {
+        font-size: 2.2rem;
+
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    /* Start - information about page */
+    .hello {
+        font-size: 2.7rem;
+    }
+
+    .gitLogo img {
+        max-width: 50%;
+    }
+
+    /* Navigation */
+    .navigation {
+        top: 20%;
+    }
+
+    .active_navigation {
+        transform: translateX(0);
+    }
+
+    /* Section languages */
+    .languages_section img {
+        max-width: 60%;
+    }
+
+    .languages_section img:last-of-type {
+        width: 40%;
+
+    }
+
+    /* Section contact */
+    .contact_section input {
+        width: 70vw;
+        height: 9vh;
+        margin-top: 7vh;
+    }
+
+    input:last-of-type {
+        width: 70vw;
+        height: 55vh;
+    }
+
+    /* Button */
+    .send_button {
+        font-size: 1.3rem;
+        margin-top: 15vh;
+        width: 50vw;
+    }
+
+    /* Footer */
+    footer h3 {
+        margin-top: 15vh;
+    }
+}
+
+@media (min-width:767px) {
+    h2 {
+        font-size: 4rem;
+        letter-spacing: 8px;
+    }
+
+    p {
+        font-size: 1.9rem;
+        padding: 30px;
+        line-height: 4rem;
+    }
+
+    .hello {
+        font-size: 4.2rem;
+        letter-spacing: 7px;
+    }
+
+    /* Navigation */
+    .navigation {
+        transform: translateX(300px);
+    }
+
+    .active_navigation {
+        transform: translateX(0);
+    }
+
+    #item {
+        font-size: 2rem;
+        padding: 15px 15px;
+        box-shadow: 4px 4px black;
+        text-shadow: 4px 4px black;
+    }
+
+    .start_section h2 {
+        font-size: 3.6rem;
+        letter-spacing: 6px;
+    }
+
+    /* Section languages */
+    .languages_section h3 {
+        font-size: 2.2rem;
+        letter-spacing: 6px;
+    }
+
+    /* Section contact */
+    .contact_section input {
+        width: 80vw;
+        height: 5vh;
+        box-shadow: 2px 2px black;
+    }
+
+    input:last-of-type {
+        width: 85vw;
+        height: 32vh;
+    }
+
+    ::placeholder {
+        font-size: 0.9rem;
+    }
+
+    /* Button */
+    .send_button {
+        font-size: 1.6rem;
+        margin: 8vh auto;
+        letter-spacing: 4px;
+        box-shadow: 4px 4px black;
+        text-shadow: 3px 3px black;
+    }
+
+    /* Footer */
+    footer h3 {
+        font-size: 1rem;
+    }
+}
 }
