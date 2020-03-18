@@ -422,78 +422,128 @@ footer h3 {
     }
 }
 
-@media (min-width:767px) {
+@media (min-width: 1023px) {
     h2 {
-        font-size: 4rem;
-        letter-spacing: 8px;
+        font-size: 3rem;
+
     }
 
     p {
-        font-size: 1.9rem;
-        padding: 30px;
-        line-height: 4rem;
+        font-size: 1.5rem;
+        line-height: 3rem;
+        padding: 40px;
     }
 
+    /* Start - information about page */
     .hello {
-        font-size: 4.2rem;
-        letter-spacing: 7px;
+        font-size: 4rem;
+    }
+
+    .gitLogo img {
+        max-width: 40%;
+    }
+
+    .gitLogo a {
+        font-size: 2.2rem;
     }
 
     /* Navigation */
     .navigation {
-        transform: translateX(300px);
+        top: 15%;
+        transform: translate(300px);
     }
 
     .active_navigation {
         transform: translateX(0);
     }
 
+    .hamburger {
+        padding: 15px;
+
+    }
+
+    .hamburger_box {
+        width: 70px;
+
+    }
+
+    .hamburger_inner,
+    .hamburger_inner::before,
+    .hamburger_inner::after {
+        height: 7px;
+    }
+
+    .hamburger_inner::before {
+        content: "";
+        margin-top: -15px;
+
+    }
+
+    .hamburger_inner::after {
+        content: "";
+        margin-top: 15px;
+    }
+
+    .active .hamburger_inner::before {
+        transform: translateY(15px) rotate(45deg) rotateY(45deg);
+    }
+
+    .active .hamburger_inner::after {
+        transform: translateY(-15px) rotate(-45deg) rotateY(-45deg);
+    }
+
     #item {
-        font-size: 2rem;
-        padding: 15px 15px;
-        box-shadow: 4px 4px black;
-        text-shadow: 4px 4px black;
+        font-size: 1.3rem;
+        padding: 15px;
     }
 
     .start_section h2 {
-        font-size: 3.6rem;
-        letter-spacing: 6px;
+        font-size: 2.8rem;
+
     }
 
     /* Section languages */
+
     .languages_section h3 {
-        font-size: 2.2rem;
-        letter-spacing: 6px;
+        font-size: 2.7rem;
+
+    }
+
+    .languages_section img {
+        max-width: 50%;
+
+    }
+
+    .languages_section img:last-of-type {
+        width: 30%;
+
     }
 
     /* Section contact */
     .contact_section input {
-        width: 80vw;
-        height: 5vh;
-        box-shadow: 2px 2px black;
+        width: 70vw;
+        height: 9vh;
+        margin-top: 7vh;
+        font-size: 1.8rem;
     }
 
     input:last-of-type {
         width: 85vw;
-        height: 32vh;
-    }
-
-    ::placeholder {
-        font-size: 0.9rem;
+        height: 25vh;
     }
 
     /* Button */
     .send_button {
-        font-size: 1.6rem;
-        margin: 8vh auto;
-        letter-spacing: 4px;
-        box-shadow: 4px 4px black;
-        text-shadow: 3px 3px black;
+        font-size: 2.3rem;
+        margin-top: 15vh;
+    }
+
+    ::placeholder {
+        font-size: 1.5rem;
     }
 
     /* Footer */
     footer h3 {
-        font-size: 1rem;
+        font-size: 2rem;
     }
-}
 }
