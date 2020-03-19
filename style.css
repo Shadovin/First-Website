@@ -28,6 +28,10 @@ p {
     line-height: 2rem;
 }
 
+.bigger {
+    display: none;
+}
+
 /* Header */
 header {
     position: relative;
@@ -436,11 +440,19 @@ footer h3 {
 
     /* Start - information about page */
     .hello {
-        font-size: 4rem;
+        font-size: 5rem;
+    }
+
+    .bigger {
+        display: block;
+    }
+
+    .smaller {
+        display: none;
     }
 
     .gitLogo img {
-        max-width: 40%;
+        max-width: 30%;
     }
 
     .gitLogo a {
@@ -463,14 +475,14 @@ footer h3 {
     }
 
     .hamburger_box {
-        width: 70px;
+        width: 60px;
 
     }
 
     .hamburger_inner,
     .hamburger_inner::before,
     .hamburger_inner::after {
-        height: 7px;
+        height: 6px;
     }
 
     .hamburger_inner::before {
@@ -495,6 +507,7 @@ footer h3 {
     #item {
         font-size: 1.3rem;
         padding: 15px;
+        cursor: pointer;
     }
 
     .start_section h2 {
@@ -510,12 +523,12 @@ footer h3 {
     }
 
     .languages_section img {
-        max-width: 50%;
+        max-width: 30%;
 
     }
 
     .languages_section img:last-of-type {
-        width: 30%;
+        width: 25%;
 
     }
 
@@ -528,14 +541,15 @@ footer h3 {
     }
 
     input:last-of-type {
-        width: 85vw;
-        height: 25vh;
+        width: 70vw;
+        height: 40vh;
     }
 
     /* Button */
     .send_button {
         font-size: 2.3rem;
         margin-top: 15vh;
+        cursor: pointer;
     }
 
     ::placeholder {
