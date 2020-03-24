@@ -6,11 +6,19 @@ const menu = () => {
     navigation.classList.toggle('active_navigation');
 }
 hamburger.addEventListener('click', menu);
+// Animation of popup
+const button_send = document.querySelector(".send_button");
+const popup = document.querySelector(".popup");
+const popup_close = document.querySelector(".close_button");
 
-// $('.menu li').on('click', function () {
-//     const goToSection = "[data-section=" + $(this).attr('class') + "]";
-//     $('body, html').animate({
-//         scrollTop: $(goToSection).offset().top
-//     }, 600)
-// })
-const liList = document.querySelectorAll('#item');
+const show_popup = () => {
+    popup.classList.toggle('popup_active');
+    document.body.style.opacity('0.1');
+
+}
+const close_button = () => {
+    popup.classList.remove('popup_active');
+
+}
+button_send.addEventListener('click', show_popup);
+popup_close.addEventListener('click', close_button);

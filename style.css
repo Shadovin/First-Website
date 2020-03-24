@@ -91,6 +91,7 @@ header {
     color: goldenrod;
     background-color: #111;
     transition: color .3s linear;
+    cursor: pointer;
 }
 
 #item:hover {
@@ -249,6 +250,42 @@ input:last-of-type {
     color: white;
 }
 
+.popup {
+    position: fixed;
+    bottom: 40%;
+    left: 0;
+    width: 100vw;
+    height: 20vh;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    box-shadow: 2px 2px black;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #111;
+    transform: scale(0);
+    transition: transform, linear, .3s;
+}
+
+.popup_active {
+    transform: scale(1);
+}
+
+.popup p {
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+}
+
+.close_button {
+    position: absolute;
+    top: 4%;
+    right: 2%;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
 /* Footer */
 footer h3 {
     margin-top: 8vh;
@@ -258,6 +295,7 @@ footer h3 {
 }
 
 /* Media Queries */
+
 
 @media (min-width: 410px) {
     h2 {
@@ -361,6 +399,14 @@ footer h3 {
     footer h3 {
         font-size: 1rem;
     }
+
+    .popup p {
+        font-size: 1.5rem;
+    }
+
+    .close_button {
+        font-size: 1.4rem;
+    }
 }
 
 @media (min-width: 567px) {
@@ -414,15 +460,48 @@ footer h3 {
     }
 
     /* Button */
-    .send_button {
-        font-size: 1.3rem;
-        margin-top: 15vh;
-        width: 50vw;
+    .popup {
+        height: 50vh;
+    }
+
+    .popup p {
+        letter-spacing: 8px;
+        font-size: 1.5rem;
+    }
+
+    .close_button {
+        font-size: 1.8rem;
+
     }
 
     /* Footer */
     footer h3 {
         margin-top: 15vh;
+    }
+}
+
+@media (min-width: 639px) {
+    .popup p {
+        letter-spacing: 8px;
+        font-size: 1.7rem;
+    }
+
+    .close_button {
+        font-size: 2rem;
+
+    }
+}
+
+@media (min-width: 731px) {
+    .popup p {
+        letter-spacing: 8px;
+        font-size: 1.8rem;
+        padding: 0 30px;
+    }
+
+    .close_button {
+        font-size: 2rem;
+
     }
 }
 
@@ -507,7 +586,7 @@ footer h3 {
     #item {
         font-size: 1.3rem;
         padding: 15px;
-        cursor: pointer;
+
     }
 
     .start_section h2 {
@@ -554,5 +633,15 @@ footer h3 {
 
     ::placeholder {
         font-size: 1.5rem;
+    }
+
+    .popup p {
+        letter-spacing: 8px;
+        font-size: 3rem;
+    }
+
+    .close_button {
+        font-size: 4rem;
+
     }
 }

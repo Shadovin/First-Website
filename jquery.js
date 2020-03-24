@@ -5,4 +5,5 @@ $('.menu li').on('click', function () {
     $('body, html').animate({
         scrollTop: $(goToSection).offset().top
     }, 600)
+
 })
